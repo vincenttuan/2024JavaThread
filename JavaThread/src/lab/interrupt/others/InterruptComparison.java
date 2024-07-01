@@ -1,5 +1,9 @@
-package lab.interrupt;
+package lab.interrupt.others;
 
+/**
+ * 中斷狀態比較
+ * 這個程式展示了在 Java 中如何使用 isInterrupted() 和 interrupted() 方法來檢查執行緒的中斷狀態，以及這兩個方法之間的區別。
+ * */
 public class InterruptComparison {
     public static void main(String[] args) {
         // 創建並啟動執行緒

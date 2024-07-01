@@ -1,5 +1,9 @@
-package lab.interrupt;
+package lab.interrupt.others;
 
+/**
+ * 中斷執行緒的示例
+ * 這個程式展示了如何在 Java 中使用中斷機制來停止一個執行緒。程式包括兩個主要類別：InterruptExample 和 InterruptibleTask。
+ * */
 public class InterruptExample {
     public static void main(String[] args) {
         // 創建一個執行緒，該執行緒會檢查中斷狀態並進行處理
