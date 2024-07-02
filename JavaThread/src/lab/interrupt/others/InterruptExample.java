@@ -44,7 +44,8 @@ class InterruptibleTask implements Runnable {
             } catch (InterruptedException e) {
                 System.out.println("子執行緒：在睡眠中被中斷");
                 // 重新設置中斷狀態，因為拋出 InterruptedException 會清除中斷狀態
-                // 如果我們希望執行緒在捕獲 InterruptedException 後能夠繼續保持中斷狀態，方便後續的中斷檢查，我們需要在捕獲異常後重新設置中斷狀態。
+                // 如果我們希望執行緒在捕獲 InterruptedException 後能夠繼續保持中斷狀態，
+                // 方便後續的中斷檢查，我們需要在捕獲異常後重新設置中斷狀態。
                 Thread.currentThread().interrupt();
             }
         }

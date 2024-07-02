@@ -2,7 +2,8 @@ package lab.interrupt.others;
 
 /**
  * 遊戲資源加載器
- * 這個程式模擬了一個遊戲資源加載器，展示了如何在多執行緒環境下進行資源加載任務，以及如何中斷資源加載執行緒。
+ * 這個程式模擬了一個遊戲資源加載器，展示了如何在多執行緒環境下進行資源加載任務，
+ * 以及如何中斷資源加載執行緒。
  * 程式包括兩個主要類別：GameResourceLoader 和 ResourceLoaderTask。
  * */
 public class GameResourceLoader {

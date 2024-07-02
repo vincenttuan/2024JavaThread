@@ -2,7 +2,8 @@ package lab.interrupt.others;
 
 /**
  * 下載管理器程式
- * 這個程式模擬了一個簡單的下載管理器，它展示了如何在多執行緒環境下進行下載任務，以及如何中斷下載執行緒。
+ * 這個程式模擬了一個簡單的下載管理器，它展示了如何在多執行緒環境下進行下載任務，
+ * 以及如何中斷下載執行緒。
  * 程式包括兩個主要類別：DownloadManager 和 DownloadTask。
  * */
 public class DownloadManager {
