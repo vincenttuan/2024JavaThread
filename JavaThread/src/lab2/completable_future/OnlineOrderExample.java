@@ -1,8 +1,10 @@
-package lab2.completablefuture;
+package lab2.completable_future;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+// 線點餐系統中，顧客下單後，系統可以異步通知廚房準備餐點，並在餐點準備好後通知顧客。
+// 使用 CompletableFuture 可以實現這種非阻塞的異步操作。
 class OnlineOrderSystem {
     // 顧客下單
     public CompletableFuture<String> placeOrder(String order) {
