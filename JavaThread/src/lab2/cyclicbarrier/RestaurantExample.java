@@ -16,6 +16,7 @@ class Restaurant {
             barrier.await();
             // 開始烹飪
             System.out.println(Thread.currentThread().getName() + " 開始烹飪");
+            System.out.println(Thread.currentThread().getName() + " 烹飪完成");
         } catch (InterruptedException | BrokenBarrierException e) {
             Thread.currentThread().interrupt();
         }

@@ -4,6 +4,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+// 餐廳類
+// 範例模擬了一個餐廳系統，廚師在等待烹飪材料的到達。一旦材料到達，廚師會立開始烹飪。
+// 這個例子展示了如何使用 Condition 來協調多個執行緒的工作流程。
 class Restaurant {
     private final Lock lock = new ReentrantLock();
     private final Condition materialArrived = lock.newCondition();
