@@ -1,4 +1,4 @@
-package lab2.condition;
+package lab2.condition.case1;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -37,7 +37,7 @@ class Restaurant {
 
 class Chef implements Runnable {
     private final Restaurant restaurant;
-    private final long materialArrivalTime;
+    private final long materialArrivalTime; // 模擬等待材料到達所花費的時間
 
     public Chef(Restaurant restaurant, long materialArrivalTime) {
         this.restaurant = restaurant;
@@ -47,8 +47,9 @@ class Chef implements Runnable {
     @Override
     public void run() {
         try {
-            System.out.println(Thread.currentThread().getName() + " 等待材料中...");
+            System.out.println(Thread.currentThread().getName() + " 等待材料中... ==> 廚師 沒事做");
             Thread.sleep(materialArrivalTime); // 模擬材料到達的等待時間
+            
             restaurant.deliverMaterial(Thread.currentThread().getName()); // 通知材料已到達
             restaurant.waitForMaterial(); // 等待材料到達後開始烹飪
         } catch (InterruptedException e) {
