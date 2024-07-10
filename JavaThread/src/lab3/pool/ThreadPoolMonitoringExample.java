@@ -39,7 +39,8 @@ public class ThreadPoolMonitoringExample {
         
         try {
             // 等待執行緒池中的所有任務在指定的時間內完成，並在等待時間超過後強制關閉執行緒池
-            if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
+        	// 當程式執行到此會阻塞當前執行緒
+        	if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
             	// executor 強制關閉
                 executor.shutdownNow();
             }

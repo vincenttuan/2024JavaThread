@@ -17,6 +17,7 @@ public class ShutdownExample {
         executor.shutdown();
         try {
         	// 等待執行緒池中的所有任務在指定的時間內完成，並在等待時間超過後強制關閉執行緒池。
+        	// 當程式執行到此會阻塞當前執行緒
             if (!executor.awaitTermination(60, java.util.concurrent.TimeUnit.SECONDS)) {
                 executor.shutdownNow();
             }
