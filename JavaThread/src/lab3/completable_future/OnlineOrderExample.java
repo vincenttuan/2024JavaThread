@@ -46,7 +46,7 @@ public class OnlineOrderExample {
                     orderSystem.notifyCustomer(orderStatus); // 通知顧客餐點準備完成
                     return orderStatus; // 返回 orderStatus，將結果傳遞給後續的 CompletableFuture
                 });
-
+        
         // 主線程可以繼續處理其他任務
         System.out.println("主線程繼續處理其他任務...");
 
