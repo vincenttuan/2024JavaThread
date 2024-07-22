@@ -17,9 +17,9 @@ class ParkingLot {
 	public void park(String carName) throws InterruptedException {
 		System.out.println(carName + " 嘗試進入停車場...");
 		semaphore.acquire(); // 獲取許可
-		System.out.println(carName + " 成功進入停車場");
 		// 模擬車輛停放時間
-		Thread.sleep((long) (Math.random() * 10000));
+		//Thread.sleep((long) (Math.random() * 10000));
+		System.out.println(carName + " 成功進入停車場");
 		semaphore.release(); // 釋放許可
 		System.out.println(carName + " 離開停車場");
 	}
